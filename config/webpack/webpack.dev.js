@@ -18,22 +18,22 @@ module.exports = merge(commonConfig, {
   module: {
     rules: [
       // CSS
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              modules: {
-                auto: true,
-                localIdentName: "[name]__[local]--[hash:base64:5]",
-              },
-            },
-          },
-          "postcss-loader",
-        ],
-      },
+      //   {
+      //     test: /\.css$/,
+      //     use: [
+      //       "style-loader",
+      //       {
+      //         loader: "css-loader",
+      //         options: {
+      //           modules: {
+      //             auto: true,
+      //             localIdentName: "[name]__[local]--[hash:base64:5]",
+      //           },
+      //         },
+      //       },
+      //       "postcss-loader",
+      //     ],
+      //   },
     ],
   },
 
@@ -47,7 +47,6 @@ module.exports = merge(commonConfig, {
 
   devServer: {
     historyApiFallback: true,
-    hot: true,
     open: true,
     port: 3000,
     client: {
@@ -65,9 +64,9 @@ module.exports = merge(commonConfig, {
     // },
   },
 
-  optimization: {
-    removeAvailableModules: false,
-    removeEmptyChunks: false,
-    splitChunks: false,
-  },
+  //   optimization: {
+  //     removeAvailableModules: false,
+  //     removeEmptyChunks: false,
+  //     splitChunks: false,
+  //   },
 });
