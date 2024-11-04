@@ -18,22 +18,22 @@ module.exports = merge(commonConfig, {
   module: {
     rules: [
       // CSS
-      //   {
-      //     test: /\.css$/,
-      //     use: [
-      //       "style-loader",
-      //       {
-      //         loader: "css-loader",
-      //         options: {
-      //           modules: {
-      //             auto: true,
-      //             localIdentName: "[name]__[local]--[hash:base64:5]",
-      //           },
-      //         },
-      //       },
-      //       "postcss-loader",
-      //     ],
-      //   },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: "[name]__[local]--[hash:base64:5]",
+              },
+            },
+          },
+          "postcss-loader",
+        ],
+      },
     ],
   },
 

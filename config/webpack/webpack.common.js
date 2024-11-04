@@ -10,7 +10,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    extensions: [".js", ".ts", ".tsx", ".jsx", ".css"],
     alias: {
       "@": paths.appSrc,
       "@components": path.resolve(paths.appSrc, "components"),

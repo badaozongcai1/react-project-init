@@ -23,22 +23,22 @@ module.exports = merge(commonConfig, {
   module: {
     rules: [
       // CSS
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     {
-      //       loader: "css-loader",
-      //       options: {
-      //         modules: {
-      //           auto: true,
-      //           localIdentName: "[hash:base64]",
-      //         },
-      //       },
-      //     },
-      //     "postcss-loader",
-      //   ],
-      // },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: "[hash:base64]",
+              },
+            },
+          },
+          "postcss-loader",
+        ],
+      },
     ],
   },
 
