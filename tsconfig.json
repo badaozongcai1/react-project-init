@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+      // 项目配置
+      "target": "ES2020",            // 编译目标ES版本
+      "module": "ESNext",            // 模块系统
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],  // 编译过程中需要引入的库文件
+      "skipLibCheck": true,          // 跳过所有.d.ts文件的类型检查
+      "moduleResolution": "bundler", // 模块解析策略
+      "jsx": "react-jsx",           // React JSX设置
+      "allowJs": true,              // 允许编译JS文件
+      
+      // 严格检查
+      "strict": true,               // 启用所有严格类型检查选项
+      "noUnusedLocals": true,       // 检查未使用的局部变量
+      "noUnusedParameters": true,   // 检查未使用的参数
+      "noFallthroughCasesInSwitch": true, // 检查switch语句包含正确的break
+      "noUncheckedIndexedAccess": true,   // 检查索引签名访问
+  
+      // 模块解析
+      "baseUrl": ".",              // 基础目录
+      "paths": {                   // 路径映射，配合baseUrl
+        "@/*": ["src/*"],         // @/指向src/
+        "@components/*": ["src/components/*"],
+        "@pages/*": ["src/pages/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@states/*": ["src/states/*"]
+      },
+      
+      // 其他选项
+      "resolveJsonModule": true,    // 允许导入json模块
+      "isolatedModules": true,     // 确保每个文件都可以安全地进行转译
+      "esModuleInterop": true,     // 启用ES模块互操作性
+      "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中默认导入
+      "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+      
+      // 输出配置
+      "noEmit": true              // 不生成输出文件(交给构建工具)
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "build"
+    ],
+    "references": [
+      // 项目引用，如果有的话
+    ]
+  }

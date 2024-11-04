@@ -1,6 +1,6 @@
 # react-project-init（Not completed）
 
-project structure initial file（Out-of-the-box），
+project structure initial file（Out-of-the-box）
 
 ## 技术架构
 
@@ -14,6 +14,7 @@ react+ts+tailwind+webpck5+eslint+router+mui+jotai
 ├── config/               # 配置文件目录
 ├── docs/                 # 文档目录
 ├── public/               # 静态资源目录
+├── scripts/              # 脚本文件目录
 ├── src/                  # 源代码目录
 │   ├── abi/              # 智能合约ABI文件目录(Web3相关)
 │   ├── components/       # React组件目录
