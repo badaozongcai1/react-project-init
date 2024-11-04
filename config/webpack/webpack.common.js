@@ -5,9 +5,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const paths = require("./paths");
 
 module.exports = {
-  //   entry: {
-  //     main: path.resolve(paths.appSrc, "index.tsx"),
-  //   },
+  entry: {
+    main: path.resolve(paths.appSrc, "index.tsx"),
+  },
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
@@ -25,19 +25,11 @@ module.exports = {
       // TypeScript
       {
         test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                "@babel/preset-env",
-                "@babel/preset-react",
-                "@babel/preset-typescript",
-              ],
-            },
-          },
-        ],
+        exclude: /(node_modules)/,
+        use: {
+          // `.swcrc` can be used to configure swc
+          loader: "swc-loader",
+        },
       },
       // Images
       {
