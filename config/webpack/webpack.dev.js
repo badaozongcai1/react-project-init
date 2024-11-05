@@ -15,6 +15,15 @@ module.exports = merge(commonConfig, {
     publicPath: "/",
   },
 
+  // stats: 'errors-only',
+  // output: {
+  //   publicPath: '/',
+  //   //如果是通过loader 编译的 放到scripts文件夹里 filename
+  //   filename: 'scripts/[name].bundle.js',
+  //   //如果是通过'asset/resource' 编译的
+  //   assetModuleFilename: 'images/[name].[ext]',
+  // },
+
   module: {
     rules: [
       // CSS
