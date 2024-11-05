@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import ButtonUsage from "@pages/App";
+import Button from "@mui/material/Button";
+import Button1 from "@components/ui/Button";
 const container = document.getElementById("app");
 
 if (!container) {
@@ -13,6 +14,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <div className="underline">React Hello </div>
-    <ButtonUsage></ButtonUsage>
+    <Button variant="contained">mui Button</Button>
+    <Button1>二封mui button</Button1>
   </React.StrictMode>
 );
