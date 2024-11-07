@@ -31,6 +31,12 @@ const App = () => {
       }),
     [mode]
   );
+  // 仅在开发环境中初始化 vConsole，移动端使用
+  // if (process.env.NODE_ENV === "development") {
+  //   // eslint-disable-next-line @typescript-eslint/no-var-requires, import/no-extraneous-dependencies
+  //   const VConsole = require("vconsole");
+  //   new VConsole();
+  // }
   return (
     <>
       <StyledEngineProvider injectFirst>
