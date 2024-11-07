@@ -22,6 +22,7 @@
         "@/*": ["src/*"],         // @/指向src/
         "@components/*": ["src/components/*"],
         "@pages/*": ["src/pages/*"],
+        "@layouts/*": ["src/layouts/*"],
         "@hooks/*": ["src/hooks/*"],
         "@states/*": ["src/states/*"]
       },

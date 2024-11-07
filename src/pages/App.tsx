@@ -4,11 +4,13 @@ import {
   ThemeProvider,
 } from "@mui/material/styles";
 import { createContext, useMemo, useState } from "react";
-import Button from "@mui/material/Button";
-import Button1 from "@components/ui/Button";
+import { useRoutes } from "react-router-dom";
+import routes from "@/routes/index";
+import { HelmetProvider } from "react-helmet-async";
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 const App = () => {
+  const routing = useRoutes(routes);
   const [mode, setMode] = useState<"light" | "dark">("light");
   // 颜色模式
   const colorMode = useMemo(
@@ -34,9 +36,7 @@ const App = () => {
       <StyledEngineProvider injectFirst>
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
-            <div className="underline">React Hello </div>
-            <Button variant="contained">mui Button</Button>
-            <Button1>二封mui button</Button1>
+            <HelmetProvider>{routing}</HelmetProvider>
           </ThemeProvider>
         </ColorModeContext.Provider>
       </StyledEngineProvider>

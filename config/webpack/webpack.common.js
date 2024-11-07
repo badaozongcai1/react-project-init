@@ -15,6 +15,7 @@ module.exports = {
       "@": paths.appSrc,
       "@components": path.resolve(paths.appSrc, "components"),
       "@pages": path.resolve(paths.appSrc, "pages"),
+      "@layouts": path.resolve(paths.appSrc, "layouts"),
       "@hooks": path.resolve(paths.appSrc, "hooks"),
       "@states": path.resolve(paths.appSrc, "states"),
     },

@@ -58,6 +58,7 @@ module.exports = merge(commonConfig, {
     historyApiFallback: true,
     open: true,
     port: 3000,
+    hot: true,
     client: {
       overlay: {
         errors: true,
