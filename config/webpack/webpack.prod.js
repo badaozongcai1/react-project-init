@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const paths = require("./paths");
 const commonConfig = require("./webpack.common");
 
@@ -45,11 +45,11 @@ module.exports = merge(commonConfig, {
     //     filename: "[name].[contenthash].css",
     //     chunkFilename: "[id].[contenthash].css",
     //   }),
-    //   process.env.ANALYZE && new BundleAnalyzerPlugin(),
+    process.env.ANALYZE ? new BundleAnalyzerPlugin() : null,
     //   new webpack.DefinePlugin({
     //     "process.env.NODE_ENV": JSON.stringify("production"),
     //   }),
-  ],
+  ].filter(Boolean),
 
   optimization: {
     minimize: true,
