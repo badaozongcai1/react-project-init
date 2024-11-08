@@ -1,8 +1,6 @@
 // config/webpack/webpack.prod.js
 const webpack = require("webpack");
 const { merge } = require("webpack-merge");
-// const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // const TerserPlugin = require("terser-webpack-plugin");
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
@@ -26,7 +24,7 @@ module.exports = merge(commonConfig, {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -42,17 +40,16 @@ module.exports = merge(commonConfig, {
     ],
   },
 
-  // plugins: [
-  //   // new CleanWebpackPlugin(),
-  //   new MiniCssExtractPlugin({
-  //     filename: "[name].[contenthash].css",
-  //     chunkFilename: "[id].[contenthash].css",
-  //   }),
-  //   process.env.ANALYZE && new BundleAnalyzerPlugin(),
-  //   new webpack.DefinePlugin({
-  //     "process.env.NODE_ENV": JSON.stringify("production"),
-  //   }),
-  // ].filter(Boolean),
+  plugins: [
+    //   new MiniCssExtractPlugin({
+    //     filename: "[name].[contenthash].css",
+    //     chunkFilename: "[id].[contenthash].css",
+    //   }),
+    //   process.env.ANALYZE && new BundleAnalyzerPlugin(),
+    //   new webpack.DefinePlugin({
+    //     "process.env.NODE_ENV": JSON.stringify("production"),
+    //   }),
+  ],
 
   // optimization: {
   //   minimizer: [
