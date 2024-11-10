@@ -25,12 +25,10 @@ export interface CustomButtonProps {
 export const SearchButton: React.FC<CustomButtonProps> = ({
   children,
   onClick,
-}) => {
-  return (
-    <CustomButton disableElevation onClick={onClick}>
-      {children}
-    </CustomButton>
-  );
-};
+}) => (
+  <CustomButton disableElevation onClick={onClick}>
+    {children}
+  </CustomButton>
+);
 
 export default SearchButton;

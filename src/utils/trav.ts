@@ -2,7 +2,7 @@ type TreeNode = {
   val: number;
   children: TreeNode[];
 };
-var treenode: TreeNode = {
+let treenode: TreeNode = {
   val: 1,
   children: [
     {
@@ -26,6 +26,7 @@ function DFS(node: TreeNode): void {
     DFS(element);
   }
 }
+DFS(treenode);
 function DFSW(root: TreeNode): void {
   let stack = [root];
   while (stack.length) {
@@ -36,6 +37,7 @@ function DFSW(root: TreeNode): void {
     }
   }
 }
+DFSW(treenode);
 function BFS(root: TreeNode): void {
   let queue = [root];
   while (queue.length) {
@@ -48,3 +50,4 @@ function BFS(root: TreeNode): void {
     }
   }
 }
+BFS(treenode);
