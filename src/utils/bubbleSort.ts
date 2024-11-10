@@ -1,3 +1,4 @@
+/* eslint-disable */
 let arr: number[] = [5, 3, 8, 4, 6];
 
 function bubbleSort(arr: number[]): number[] {

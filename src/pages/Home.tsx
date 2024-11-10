@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 const HomePage = () => {
-  console.log("👪👪👪👪👪👪👪👪👪👪👪👪👪");
+  // console.log("👪👪👪👪👪👪👪👪👪👪👪👪👪");
 
   /************* */
   let [a, setA] = useState({

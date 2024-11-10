@@ -1,3 +1,4 @@
+/* eslint-disable */
 type TreeNode = {
   val: number;
   children: TreeNode[];
