@@ -12,3 +12,4 @@ function bubbleSort(arr: number[]): number[] {
   return arr;
 }
 console.log(bubbleSort(arr));
+export {};
