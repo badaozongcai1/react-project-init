@@ -17,3 +17,4 @@ function selectionSort(array: number[]): number[] {
   return array;
 }
 console.log(selectionSort(arr));
+export {}
