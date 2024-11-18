@@ -72,7 +72,7 @@ react-project-init/
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/react-project-init.git
+git clone https://github.com/badaozongcai1/react-project-init.git
 
 # 安装依赖
 pnpm install
@@ -156,6 +156,6 @@ pnpm run client:server
 **[更新日志](CHANGELOG.md)** |
 **[贡献指南](CONTRIBUTING.md)**
 
-Built with ❤️ by [Your Name]
+Built with ❤️ by [badaozongcai]
 
 </div>
