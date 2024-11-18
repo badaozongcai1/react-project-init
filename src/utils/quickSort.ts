@@ -29,3 +29,4 @@ function swap(array: number[], i: number, j: number) {
   [array[i], array[j]] = [array[j]!, array[i]!];
 }
 console.log(quickSort(arr)); // 输出: [2, 3, 5, 6, 7, 9]
+export {};
