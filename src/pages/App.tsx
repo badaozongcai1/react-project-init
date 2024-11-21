@@ -19,7 +19,7 @@ const App = () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
       },
     }),
-    [],
+    []
   );
   // MUI主题配置
   const theme = useMemo(
@@ -29,7 +29,7 @@ const App = () => {
           mode,
         },
       }),
-    [mode],
+    [mode]
   );
   // 仅在开发环境中初始化 vConsole，移动端使用
   // if (process.env.NODE_ENV === "development") {
