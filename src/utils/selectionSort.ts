@@ -16,5 +16,6 @@ function selectionSort(array: number[]): number[] {
   }
   return array;
 }
+// eslint-disable-next-line no-console
 console.log(selectionSort(arr));
-export {}
+export {};

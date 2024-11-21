@@ -1,5 +1,5 @@
 // 使用JavaScript实现快速排序
-var arr: number[] = [5, 3, 7, 6, 2, 9];
+let arr: number[] = [5, 3, 7, 6, 2, 9];
 function quickSort(array: number[]) {
   sort(array, 0, array.length - 1);
   return array;
@@ -28,5 +28,6 @@ function partition(array: number[], lo: number, hi: number) {
 function swap(array: number[], i: number, j: number) {
   [array[i], array[j]] = [array[j]!, array[i]!];
 }
+// eslint-disable-next-line no-console
 console.log(quickSort(arr)); // 输出: [2, 3, 5, 6, 7, 9]
 export {};

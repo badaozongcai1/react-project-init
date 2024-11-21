@@ -6,7 +6,7 @@ const HomePage = () => {
 
   /************* */
   let [a, setA] = useState({
-    data: 1
+    data: 1,
   });
   const handleClick = () => {
     // setA(a + 1);

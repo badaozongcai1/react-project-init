@@ -26,5 +26,5 @@ function binarySearch(arr: number[], target: number): number {
   }
   return -1;
 }
-
+// eslint-disable-next-line no-console
 console.log(binarySearch(array, target)); // 输出：6

@@ -14,7 +14,7 @@ const CustomButton = styled(Button)({
   textTransform: "none",
   "&:hover": {
     backgroundColor: "#48e59b",
-  }
+  },
 });
 
 export interface CustomButtonProps {

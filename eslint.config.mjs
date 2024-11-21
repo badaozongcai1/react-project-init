@@ -3,6 +3,7 @@ import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import jsonParser from "jsonc-eslint-parser";
 
 export default [
   {
@@ -44,6 +45,27 @@ export default [
       "**/pnpm-lock.yaml",
     ],
   },
+  // JSON 文件的配置
+  {
+    files: ["**/*.json", "**/*.jsonc"],
+    languageOptions: {
+      parser: jsonParser,
+    },
+    rules: {
+      "json/invalid": "error", // JSON 语法错误检查
+      "json/undefined": "error", // 未定义的属性检查
+      "json/enum": "error", // 枚举值检查
+      "json/unexpected-end-of-comment": "error", // 注释结束符检查
+      "json/unexpected-end-of-string": "error", // 字符串结束符检查
+      "json/unexpected-end-of-number": "error", // 数字格式检查
+      "json/comma-style": ["error", "last"], // 逗号样式
+      "json/comma-dangle": ["error", "never"], // 禁止末尾逗号
+      "json/indent": ["error", 2], // 缩进设置
+      "json/quote-props": ["error", "always"], // 属性名必须使用引号
+      "json/quotes": ["error", "double"], // 使用双引号
+      "json/space-unary-ops": "error", // 一元运算符周围的空格
+    },
+  },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
@@ -83,7 +105,7 @@ export default [
           varsIgnorePattern: "^_",
         },
       ],
-      "@typescript-eslint/no-non-null-assertion": "warn",
+      "@typescript-eslint/no-non-null-assertion": "off",
 
       // React 规则
       "react/jsx-uses-react": "off",
@@ -102,14 +124,13 @@ export default [
 
       // ES6+ 规则
       "no-var": "error",
-      // "prefer-const": "error",
       "prefer-arrow-callback": "warn",
       "arrow-body-style": ["warn", "as-needed"],
 
       // 代码风格
       indent: ["error", 2],
-      quotes: ["error", "double"], // 改为双引号
-      "jsx-quotes": ["error", "prefer-double"], // JSX 也使用双引号
+      quotes: ["error", "double"],
+      "jsx-quotes": ["error", "prefer-double"],
       semi: ["error", "always"],
       "comma-dangle": ["error", "always-multiline"],
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
@@ -120,9 +141,9 @@ export default [
       "no-console": "warn",
       "no-debugger": "error",
       "no-alert": "error",
-      "no-unused-vars": "off", // 使用 @typescript-eslint/no-unused-vars 替代
-      "no-use-before-define": "off", // 使用 @typescript-eslint 版本
-      "@typescript-eslint/no-use-before-define": ["error"],
+      "no-unused-vars": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["off"],
       "max-len": [
         "warn",
         {
