@@ -19,3 +19,4 @@ function sequentialSearch(array: number[], target: number): number {
 console.log(sequentialSearch(arr, 5)); // 输出: 4
 // eslint-disable-next-line no-console
 console.log(sequentialSearch(arr, 10)); // 输出: -1
+export {};
