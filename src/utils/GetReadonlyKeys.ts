@@ -59,3 +59,4 @@ type Array1 = (string | number)[];
 
 // 2. 使用 Array 泛型
 type Array2 = Array<string | number>;
+export {};
