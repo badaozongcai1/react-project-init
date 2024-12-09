@@ -8,6 +8,7 @@ import jsonParser from "jsonc-eslint-parser";
 export default [
   {
     ignores: [
+      "src/utils",
       "node_modules/*",
       "config/",
       "tests/",
