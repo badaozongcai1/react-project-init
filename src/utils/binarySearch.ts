@@ -28,3 +28,4 @@ function binarySearch(arr: number[], target: number): number {
 }
 // eslint-disable-next-line no-console
 console.log(binarySearch(array, target)); // 输出：6
+export {};
