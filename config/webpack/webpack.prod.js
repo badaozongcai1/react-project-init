@@ -24,7 +24,7 @@ module.exports = merge(commonConfig, {
       {
         test: /\.css$/,
         use: [
-          // MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -41,10 +41,10 @@ module.exports = merge(commonConfig, {
   },
 
   plugins: [
-    //   new MiniCssExtractPlugin({
-    //     filename: "[name].[contenthash].css",
-    //     chunkFilename: "[id].[contenthash].css",
-    //   }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
+    }),
     process.env.ANALYZE ? new BundleAnalyzerPlugin() : null,
     //   new webpack.DefinePlugin({
     //     "process.env.NODE_ENV": JSON.stringify("production"),
